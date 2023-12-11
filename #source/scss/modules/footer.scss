@@ -1,0 +1,163 @@
+// СТИЛИ ОСНОВНОГО ХЕДЕРА < -- START HERE -- >
+
+
+.footer {
+
+    background-color: #fff;
+    
+    &__wrapper {
+        background-color: $main-blue;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+    }
+
+    &__container {
+        padding-top: 48px !important;
+        padding-bottom: 48px !important;
+
+        
+    }
+
+    &__row {
+        row-gap: 32px;
+        justify-content: space-around !important;
+
+        & > .col-3 {
+            @media (max-width:768px) {
+                padding: 0 16px;
+            }
+        }
+    }
+
+    &__block {
+
+    }
+
+    &__list {   
+
+        &-horizontal {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            
+            & > .footer__item > a {
+                color: $bg-color;
+                transition: .2s ease-in;
+                text-decoration: none;
+
+                
+                
+                &:hover {
+                    transition: .2s ease-in;
+                    color: #FFC93E;
+                }
+        
+            }
+
+            @media (max-width:991px) {
+                flex-direction: column;
+            }
+        }
+
+        &-vertical {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            & > .footer__item > a {
+                color: $bg-color;
+                transition: .2s ease-in;
+                text-decoration: none;
+
+                
+                
+                &:hover {
+                    transition: .2s ease-in;
+                    color: #FFC93E;
+                }
+        
+            }
+        }
+    }
+
+    &__title {
+        color: $bg-color;
+
+        margin-bottom: 18px;
+    }
+
+    
+    
+
+
+    &__divider {
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.50);
+        margin: 48px 0;
+    }
+
+    &__nav {
+        margin-bottom: 40px;
+    }
+
+    &__info {
+
+    }
+
+    &__article {
+
+        & > p {
+            color: $bg-color;
+
+            font-family: 'Nunito Sans';
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16px;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width:567px) {
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        &-secondary {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            gap: 24px;
+
+            & > div:nth-child(2) {
+                max-width: 150px;
+            }
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        color: $bg-color;
+
+        & > div {
+            text-align: center;
+            font-weight: 500;
+        }
+    }
+
+    &__logo {
+        margin-right: 56px;
+    }
+}
+
+// СТИЛИ ОСНОВНОГО ХЕДЕРА < -- END HERE -- >

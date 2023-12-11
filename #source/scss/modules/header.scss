@@ -1,0 +1,313 @@
+@import "modules/variables.scss";
+// СТИЛИ ОСНОВНОГО ХЕДЕРА < -- START HERE -- >
+
+body {
+    background-color: $bg-color;
+}
+
+.header {
+
+    position: relative;
+
+    z-index: 100;
+    background-color: #2472D9;
+
+    &__wrapper {
+        background-color: $bg-color;
+
+        transition: .5s ease-in-out;
+
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+    
+
+}
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 16px 0;
+    
+    height: 90px;   
+
+    @media (max-width:991px) {
+        height: 56px;
+    }
+
+        &-secondary {
+            align-items: center;
+            justify-content: center;
+
+            & > .nav__logo {
+                margin-right: unset;
+            }
+        }
+
+
+        &__list { // <ul>...</ul>
+            list-style: none;
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            flex: 1;
+
+            @media (max-width:991px) {
+                display: none;
+            }
+        }
+        &__logo {
+            margin-right: 32px;
+
+            @media (max-width:991px) {
+                width: 125px;
+                height: 26px;
+            }
+        }
+        &__item { // <li>...</li>
+            
+            & > a {
+                padding: 14px 16px;
+                transition: .2s ease-in;
+
+                color: $main-blue;
+
+                text-decoration: none;
+
+                border-radius: 12px;
+
+                display: flex;
+
+                &:hover {
+                    background-color: $text-gray-5;
+                    color: $main-blue;
+                }
+            }
+
+            
+        }
+
+        &__button {
+            @media (max-width:991px) {
+                display: none !important;
+            }
+        }
+
+        &__burger {
+            display: flex;
+            
+
+            z-index: 100;
+
+            @media (min-width:992px) {
+                display: none;
+            }
+        }
+}
+
+// СТИЛИ ОСНОВНОГО ХЕДЕРА < -- END HERE -- >
+
+#hamburger {
+    width: 42px;
+    height: 42px;
+
+    
+}
+
+#top-line,
+#bottom-line,
+#middle-line {
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+#top-line {
+    animation: none; /* Начальное состояние без анимации */
+}
+
+#bottom-line {
+    animation: none; /* Начальное состояние без анимации */
+}
+
+#middle-line {
+    animation: none; /* Начальное состояние без анимации */
+}
+
+.clicked #top-line {
+    animation: down-rotate 0.6s ease-out both;
+}
+
+.clicked #bottom-line {
+    animation: up-rotate 0.6s ease-out both;
+}
+
+.clicked #middle-line {
+    animation: hide 0.6s ease-out forwards;
+}
+
+@keyframes down-rotate {
+    0% {
+        animation-timing-function: cubic-bezier(0.16, -0.88, 0.97, 0.53);
+        transform: translateY(0px);
+    }
+    30% {
+        transform-origin: center;
+        animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+        transform: translateY(10px);
+    }
+    100% {
+        transform-origin: center;
+        transform: translateY(10px) rotate(-45deg) scale(0.9);
+    }
+}
+
+@keyframes up-rotate {
+    0% {
+        animation-timing-function: cubic-bezier(0.16, -0.88, 0.97, 0.53);
+        transform: translateY(0px);
+    }
+    30% {
+        transform-origin: center;
+        animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+        transform: translateY(-10px);
+    }
+    100% {
+        transform-origin: center;
+        transform: translateY(-10px) rotate(45deg) scale(0.9);
+    }
+}
+
+
+@keyframes hide {
+    29% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Обратная анимация для возвращения в исходное состояние */
+.reverse-animation #top-line {
+    animation: down-rotate-reverse 0s ease-out both;
+}
+
+.reverse-animation #bottom-line {
+    animation: up-rotate-reverse 0s ease-out both;
+}
+
+.reverse-animation #middle-line {
+    animation: show 0s ease-out forwards;
+}
+
+@keyframes up-rotate-reverse {
+    0% {
+        animation-timing-function: cubic-bezier(0.16, -0.88, 0.97, 0.53);
+        transform: translateY(0px);
+    }
+    30% {
+        transform-origin: center;
+        animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+        transform: translateY(-10px);
+    }
+    100% {
+        transform-origin: center;
+        transform: translateY(-10px) rotate(45deg) scale(0.9);
+    }
+}
+
+@keyframes down-rotate-reverse {
+    0% {
+        animation-timing-function: cubic-bezier(0.16, -0.88, 0.97, 0.53);
+        transform: translateY(0px);
+    }
+    30% {
+        transform-origin: center;
+        animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+        transform: translateY(10px);
+    }
+    100% {
+        transform-origin: center;
+        transform: translateY(10px) rotate(-45deg) scale(0.9);
+    }
+}
+
+@keyframes show {
+    29% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+.mobile-menu {
+  position: absolute;
+  top: -56px;
+  left: 0;
+  width: 100%;
+  max-height: 0; /* Меню начинается с нулевой высоты */
+  overflow: hidden; /* Скрытие контента, который не помещается в область */
+  background-color: white; /* Желаемый цвет фона */
+  z-index: 99;
+  
+  transition: max-height .3s ease-in; /* Анимация через изменение max-height */
+  height: calc(100vh + 56px);
+
+  padding-top: 56px;
+  
+
+  &__list {
+    padding-top: 56px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+    
+  }
+
+  &__item {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__button {
+    width: 50%;
+
+    @media (max-width:425px) {
+        width: 90%;
+    }
+    
+  }
+  
+}
+
+.mobile-menu.active {
+    transition: max-height 1.3s ease-in; /* Анимация через изменение max-height */
+    max-height: calc(100vh + 56px); /* При добавлении класса active меню будет выезжать и занимать всю высоту экрана */
+    height: calc(100vh + 56px);
+    z-index: 99;
+
+    
+}

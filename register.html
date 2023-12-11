@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <link rel="stylesheet" href="./css/bootstrap.min.css"> -->
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="./js/index.js"></script>
+
+</head>
+<body class="register__body">
+    
+    <header class="header header-secondary" id="header header-secondary">
+        <div class="header__wrapper">
+            <div class="container">
+
+                <nav class="nav nav-secondary">
+                    
+                    <div class="nav__logo">
+                        <a href="/">
+                            <img src="./img/svg/Logo.svg" alt="Main-Logo">
+                        </a>
+                    </div>
+
+                    <!-- <div class="nav__burger">
+                        <svg id="hamburger" class="Header__toggle-svg" viewbox="0 0 60 40">
+                            <g stroke="#002956" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                                <path id="top-line" d="M10,10 L50,10 Z"></path>
+                                <path id="middle-line" d="M10,20 L50,20 Z"></path>
+                                <path id="bottom-line" d="M10,30 L50,30 Z"></path>
+                            </g>
+                        </svg>
+                    </div> -->
+
+
+                    
+                </nav>
+
+                
+
+            </div>
+        </div>
+    </header>
+    
+    <main class="register__main">
+
+        
+        <div class="container registration__container">
+            <div class="registration-form__progress-bar" style="transition: 0.6s ease-in;"></div>
+
+            <div class="registration-form__title headline-3-desktop"></div>
+
+            <div class="registration-form">
+                <div class="step step-1 active">
+                    <div class="step-1__wrapper">
+
+                        <div class="step__input-title fields__text-title">Introduzca su nombre</div>
+                        <input type="text" class="input input--first-name fields__text-placeholder" placeholder="Introduzca su nombre">
+                        <div class="step__input-title fields__text-title">Ingresa tu apellido</div>
+                        <input type="text" class="input input--last-name fields__text-placeholder" placeholder="Ingresa tu apellido">
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="checkbox">
+                            <span class="body-text-desktop-2">Acepto el <a href="">tratamiento de mis datos personales</a></span>
+                        </label>
+                        <button class="continue-btn button-link-medium">Продолжить
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                <path d="M5.5 12H19.5" stroke="#002956" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12.5 5L19.5 12L12.5 19" stroke="#002956" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+
+                    </div>
+                </div>
+            
+                <div class="step step-2">
+                    <div class="step-2__wrapper">
+                        
+                        <div class="step__input-title fields__text-title">Su género</div>
+
+                        <div class="gender-btns">
+                            <button class="gender-btn male">El hombre</button>
+                            <button class="gender-btn female">La mujer</button>
+                        </div>
+                        
+                        <div class="step__input-title fields__text-title">Fecha de cumpleaños</div>
+
+                        <input type="date" class="input input--birth-date fields__text-placeholder" placeholder="Дата рождения">
+                        
+                        <button class="continue-btn button-link-medium">Продолжить
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                <path d="M5.5 12H19.5" stroke="#002956" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12.5 5L19.5 12L12.5 19" stroke="#002956" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <button class="back-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                    <path d="M19.5 12H5.5" stroke="#002956" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12.5 19L5.5 12L12.5 5" stroke="#002956" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Назад</span>
+                        </button>
+
+                    </div>
+                </div>
+            
+                <div class="step step-3">
+                
+                    <div class="step-3__wrapper">
+
+                        <div class="step__input-title fields__text-title">¿Alguna vez ha estado en mora en los préstamos?</div>
+
+                        <div class="answer-btns">
+                            <button class="answer-btn yes">No, no he tenido ninguna morosidad en los préstamos</button>
+                            <button class="answer-btn no">Sí, he estado en mora en los préstamos.</button>
+                        </div>
+
+                        <div class="step__input-title fields__text-title">Ingresa tus ingresos mensuales (MXN)</div>
+
+                        <input type="number" class="input input--salary fields__text-placeholder" placeholder="Ingresa tus ingresos mensuales (MXN)">
+                        
+                        <button class="continue-btn button-link-medium">Продолжить
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                <path d="M5.5 12H19.5" stroke="#002956" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12.5 5L19.5 12L12.5 19" stroke="#002956" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <button class="back-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                    <path d="M19.5 12H5.5" stroke="#002956" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12.5 19L5.5 12L12.5 5" stroke="#002956" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Назад</span>
+                        </button>
+
+                    </div>
+                
+                </div>
+            
+                <div class="step step-4">
+                
+                    <div class="step-4__wrapper">
+
+                        <div class="step__input-title fields__text-title">Ingrese correo electrónico</div>
+                        <input type="email" class="input input--email fields__text-placeholder" placeholder="Ingrese correo electrónico">
+
+                        <div class="step__input-title fields__text-title">Ingresa número telefónico</div>
+                        <input type="tel" class="input input--phone fields__text-placeholder" placeholder="+52">
+
+                        <button class="continue-btn button-link-medium">Продолжить
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                <path d="M5.5 12H19.5" stroke="#002956" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12.5 5L19.5 12L12.5 19" stroke="#002956" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <button class="back-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                    <path d="M19.5 12H5.5" stroke="#002956" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12.5 19L5.5 12L12.5 5" stroke="#002956" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Назад</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+                
+                  
+            </div>
+            <div class="registration-form-finished">
+                <div class="registration-form-finished__title headline-1-desktop">0%</div>
+                <div class="registration-form-finished__progress-bar"></div>
+                <div class="registration-form-finished__subtitle headline-5-desktop">Estamos procesando<br>tu solicitud...</div>
+            </div>
+        </div>
+          
+        
+
+    </main>
+
+    
+
+</body>
+</html>

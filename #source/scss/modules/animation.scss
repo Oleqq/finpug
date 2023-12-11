@@ -1,0 +1,51 @@
+@keyframes slideme {
+    0% { left: -30px; margin-left: 0px; }
+    30% { left: 110%; margin-left: 80px; }
+    100% { left: 110%; margin-left: 80px; }
+}
+
+@keyframes countingBar {
+    0% {width: 0;}
+    100% {width:100%;}
+}
+
+
+@keyframes marker {
+    0% {background-size: 0 85%;}
+    100% {background-size: 100% 85%;}
+}
+
+@keyframes marker-reverse {
+    0% {background-size: 100% 85%;}
+    100% {background-size: 0 85%;}
+}
+
+@keyframes expander {
+    0% {min-height: 0;}
+    100% {min-height: 430px;}
+}
+
+@keyframes rolling {
+    0% {
+        transform: scale(0.5) rotate(0deg);
+    }
+    50% {
+        transform: scale(1)  rotate(180deg);
+    }
+    100% {
+        transform: scale(0.5)  rotate(360deg);
+    }
+}
+
+
+@keyframes gray-round {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 1;
+    }
+}
+
